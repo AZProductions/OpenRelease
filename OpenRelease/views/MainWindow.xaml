@@ -6,18 +6,38 @@
         xmlns:hc="https://handyorg.github.io/handycontrol"
         xmlns:ip="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:local="clr-namespace:OpenRelease"
+        xmlns:components="OpenRelease.components"
         mc:Ignorable="d"
-           Topmost="True"
+        Topmost="True"
         ShowTitle="False"
         Title="OpenRelease" Height="450" Width="800">
     <Grid>
-        <Button Content="test" Click="Button_Click"></Button>
+        <DockPanel>
+            <Grid DockPanel.Dock="Top" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="40" Background="#33000000">
+                <ComboBox x:Name="Nav2Combo" Margin="5" SelectedIndex="0" HorizontalAlignment="Left" SelectionChanged="Nav2Combo_SelectionChanged">
+                    <ComboBoxItem Content="AstroFlare"/>
+                    <ComboBoxItem Content="Kookaburra"/>
+                    <ComboBoxItem Content="SecureVast"/>
+                    <ComboBoxItem Content="SecureVast"/>
+                    <ComboBoxItem IsEnabled="False">
+                        <Grid>
+                            <Button x:Name="Nav2ComboNewBTN" HorizontalAlignment="Center" Selector.IsSelected="False" IsEnabled="True" VerticalAlignment="Center" Content="New Project"/>
+                        </Grid>
+                    </ComboBoxItem>
+                </ComboBox>
+            </Grid>
+        </DockPanel>
+        <Button Click="Button_Click"></Button>
     </Grid>
     <hc:Window.NonClientAreaContent>
         <StackPanel VerticalAlignment="Stretch" Orientation="Horizontal">
             <Menu IsMainMenu="True">
                 <MenuItem Icon="{ip:Octicons Kind=Archive}" Width="40" IsHitTestVisible="False"></MenuItem>
-                <MenuItem Header="_File"></MenuItem>
+                <MenuItem Header="_File">
+                    <MenuItem Header="_New" Icon="{ip:Octicons Kind=Plus}">
+                        <MenuItem Header="_Project" Icon="{ip:Octicons Kind=PlusSmall}"/>
+                    </MenuItem>
+                </MenuItem>
                 <MenuItem Header="_Edit"></MenuItem>
                 <MenuItem Header="_Repository">
                     <MenuItem Header="Open on _GitHub."/>
