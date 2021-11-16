@@ -13,21 +13,26 @@
         Title="OpenRelease" Height="450" Width="800">
     <Grid>
         <DockPanel>
-            <Grid DockPanel.Dock="Top" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="40" Background="#33000000">
-                <ComboBox x:Name="Nav2Combo" Margin="5" SelectedIndex="0" HorizontalAlignment="Left" SelectionChanged="Nav2Combo_SelectionChanged">
+            <Grid DockPanel.Dock="Top" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="40" Background="{DynamicResource DarkMaskBrush}">
+                <ComboBox Background="Transparent" BorderBrush="Gray" x:Name="Nav2Combo" Margin="5" SelectedIndex="0" HorizontalAlignment="Left" SelectionChanged="Nav2Combo_SelectionChanged">
                     <ComboBoxItem Content="AstroFlare"/>
                     <ComboBoxItem Content="Kookaburra"/>
                     <ComboBoxItem Content="SecureVast"/>
-                    <ComboBoxItem Content="SecureVast"/>
+                    <ComboBoxItem Content="MyApp"/>
                     <ComboBoxItem IsEnabled="False">
                         <Grid>
                             <Button x:Name="Nav2ComboNewBTN" HorizontalAlignment="Center" Selector.IsSelected="False" IsEnabled="True" VerticalAlignment="Center" Content="New Project"/>
                         </Grid>
                     </ComboBoxItem>
                 </ComboBox>
+                <Button HorizontalAlignment="Right" VerticalAlignment="Center" Content="Publish" BorderBrush="Transparent" Foreground="White" Background="{DynamicResource DarkPrimaryBrush}" Margin="0,0,10,0">
+                    <Button.Effect>
+                        <DropShadowEffect BlurRadius="43" Direction="324" Opacity="0.06" Color="#bcbcbc" ShadowDepth="3"/>
+                    </Button.Effect>
+                </Button>
             </Grid>
         </DockPanel>
-        <Button Click="Button_Click"></Button>
+        <Button Click="Button_Click">test</Button>
     </Grid>
     <hc:Window.NonClientAreaContent>
         <StackPanel VerticalAlignment="Stretch" Orientation="Horizontal">
