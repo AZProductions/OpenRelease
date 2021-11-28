@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="https://raw.githubusercontent.com/AZProductions/OpenRelease/main/OpenRelease.Resource/Final.png" width="256"/><br />
+<img src="https://raw.githubusercontent.com/AZProductions/OpenRelease/main/.resources/Final.png" width="256"/><br />
 OpenRelease
 </h1>
 <h4 align="center" style="font-weight: bold; font-style: italic;"> Manage, Track and Distribute releases.</h4>
